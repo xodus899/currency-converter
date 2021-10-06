@@ -7,10 +7,21 @@
     <title>Currency Converter</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.png">
-    <title></title>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   </head>
   <body>
-
+    <form class="currencyInput" method="post">
+      <label for="number">Amount:</label>
+      <input id='cAmount'type="number" name="number">
+      <label for="currencyType">Currency</label>
+      <input id='cType' type="text" name="currencyType">
+      <!-- <label for="currencyType">Currency</label> -->
+      <!-- <select id="currencySym" class="currencyType" name="currencyType">
+      </select> -->
+      <input id='formSubmit' type="submit" value="Submit">
+    </form>
 
     <script type="text/javascript" src="javascript/scripts.js"></script>
   </body>
