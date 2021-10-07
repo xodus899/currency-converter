@@ -23,17 +23,16 @@ $(document).ready(function() {
       const theAmount = $("#cAmount").val();
       const theCurrency = $("#cType").val();
       const currencyTypes = data.rates
-      // console.log(currencyTypes);
-      const currencyTypesKey = (Object.keys(currencyTypes));
-      // returns the keys for currency type in array.
-      const currencyValue = (Object.values(currencyTypes));
-      //returns the value of currency types
+      const currencyArray = Object.entries(currencyTypes);
 
-      currencyTypesKey.forEach((currencyType) => {
-          if (currencyType.toLowerCase() === theCurrency.toLowerCase()) {
+      currencyArray.forEach((currencyType) => {
+          if (currencyType[0].toLowerCase() === theCurrency.toLowerCase()) {
           //user inputted currency type to match the key from object.
-              console.log('hi');
-          // if currency matches do something
+            console.log('hi');
+            console.log ( theAmount * currencyType[1] + " " + currencyType[0] )
+
+          // if currency matches, we want to take the amount and multiply by the conversion rate.
+          //then return the conversion
         }
       });
   }
