@@ -1,9 +1,9 @@
 $(document).ready(function() {
   const endPoint = "http://data.fixer.io/api/latest?access_key=";
-  const apiKey = "d5fb98300ed8ec7150a07171b4fe78ec";
-
   const noRefreshOnSubmit = function(noRefreshOnSubmit) {
       noRefreshOnSubmit.preventDefault();
+  const apikey ="Provide your own key";
+  // https://fixer.io/quickstart
 
       $.ajax({
           type: 'get',
@@ -21,16 +21,15 @@ $(document).ready(function() {
   const getRates = function(data) {
       //validate the input fields
       const theAmount = $("#cAmount").val();
-      const theCurrency = $("#cType").val();
+      const theCurrency = $("#cType").val().toLowerCase();
       const currencyTypes = data.rates
       const currencyArray = Object.entries(currencyTypes);
 
       currencyArray.forEach((currencyType) => {
-          if (currencyType[0].toLowerCase() === theCurrency.toLowerCase()) {
+          if (currencyType[0].toLowerCase() === theCurrency) {
           //user inputted currency type to match the key from object.
-            console.log('hi');
-            console.log ( theAmount * currencyType[1] + " " + currencyType[0] )
-
+            console.log('we got this far');
+            console.log ( Math.round(theAmount * currencyType[1]) + " " + currencyType[0]);
           // if currency matches, we want to take the amount and multiply by the conversion rate.
           //then return the conversion
         }
