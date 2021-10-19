@@ -2,7 +2,7 @@ $(document).ready(function() {
   const endPoint = "http://data.fixer.io/api/latest?access_key=";
   const noRefreshOnSubmit = function(noRefreshOnSubmit) {
       noRefreshOnSubmit.preventDefault();
-  // const apiKey ="add your own key from fixer";
+  const apiKey ="232f65d735f4d201846c175d8aa531cd";
   // https://fixer.io/quickstart
 
       $.ajax({
@@ -32,7 +32,7 @@ $(document).ready(function() {
           //user inputted currency type to match the key from object.
             console.log('we got this far');
             const result = Math.floor(theAmount * currencyType[1]) + " " + currencyType[0];
-            return $('.result').append(result);
+            return $('.result').html('Amount:' + result);
           // if currency matches, we want to take the amount and multiply by the conversion rate.
           //then return the conversion
         }
