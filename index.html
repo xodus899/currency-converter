@@ -12,17 +12,19 @@
   crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="">
-      <h1>Eur Currency Converter</h1>
+    <div class="container">
+      <div class="currencyH1">
+        <h1>Eur Currency Converter</h1>
+      </div>
+      <form class="currencyInput" method="post">
+        <label for="number">Amount:</label>
+        <input id='cAmount'type="number" name="number">
+        <label for="currencyType">Currency(3 Letters):</label>
+        <input id='cType' type="text" name="currencyType">
+        <input id='formSubmit' type="submit" value="Submit">
+        <p class="result"> Result: </p>
+      </form>
     </div>
-    <form class="currencyInput" method="post">
-      <label for="number">Amount:</label>
-      <input id='cAmount'type="number" name="number">
-      <label for="currencyType">Currency</label>
-      <input id='cType' type="text" name="currencyType">
-      <input id='formSubmit' type="submit" value="Submit">
-      <p class="result"> Result: </p>
-    </form>
 
     <script type="text/javascript" src="javascript/scripts.js"></script>
   </body>
