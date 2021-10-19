@@ -28,7 +28,12 @@ $(document).ready(function() {
       const currencyArray = Object.entries(currencyTypes);
 
       currencyArray.forEach((currencyType) => {
-          if (currencyType[0].toLowerCase() === theCurrency) {
+        console.log(currencyType[0]);
+          if (currencyType[0].toLowerCase() !== theCurrency) {
+            return $('.error').html('Invalid currency, please try again');
+          }
+
+          if (currencyType[0].toLowerCase() === theCurrency.toLowerCase()) {
           //user inputted currency type to match the key from object.
             console.log('we got this far');
             const result = Math.floor(theAmount * currencyType[1]) + " " + currencyType[0];
@@ -41,5 +46,5 @@ $(document).ready(function() {
   }
 
   dreadedError = function(error) {
-      console.log(error.responseText);
+      throw(error.responseText);
   }
