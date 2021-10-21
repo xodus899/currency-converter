@@ -1,6 +1,15 @@
 body {
   margin: 0 auto;
   text-align: center;
+  font-family: 'Inria Serif', serif;
+}
+
+.currencyInput label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#formSubmit {
+  font-family: 'Inria Serif', serif;
 }
 
 .container {
