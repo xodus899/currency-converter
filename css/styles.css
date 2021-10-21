@@ -2,6 +2,7 @@ body {
   margin: 0 auto;
   text-align: center;
   font-family: 'Inria Serif', serif;
+  background: #e9ecef;
 }
 
 .currencyInput label {
@@ -9,9 +10,45 @@ body {
 }
 
 #formSubmit {
+border-radius: 2px;
+padding: 5px 45px;
   font-family: 'Inria Serif', serif;
 }
 
+#cType, #cAmount {
+  padding:5px;
+  background:#f8f9fa;
+}
+
 .container {
-  padding:100px;
+  padding-top:100px;
+}
+
+input {
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 200px;
+}
+
+@media only screen and (min-width: 1000px) {
+  form {
+    padding: 0 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size:1.5rem;
+  }
+
+  form {
+    padding: 0 50px;
+  }
+
 }
