@@ -5,12 +5,16 @@ body {
   background: #e9ecef;
 }
 
+h1 {
+  padding-top:25px;
+}
+
 .currencyInput label {
   font-family: 'Montserrat', sans-serif;
 }
 
 #formSubmit {
-border-radius: 2px;
+border-radius: 5px;
 padding: 5px 45px;
   font-family: 'Inria Serif', serif;
 }
@@ -18,6 +22,7 @@ padding: 5px 45px;
 #cType, #cAmount {
   padding:5px;
   background:#f8f9fa;
+  border-radius:5px;
 }
 
 .container {
@@ -37,7 +42,7 @@ form {
   height: 100%;
   justify-content: center;
   flex-direction: column;
-  padding: 0 200px;
+  padding: 20px 200px;
   background:white;
   border-radius: 20px;
   box-shadow: 10px 10px 8px #888888;
@@ -51,11 +56,15 @@ form {
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size:1.5rem;
+    font-size:1.2rem;
   }
 
   form {
     padding: 0 50px;
+  }
+
+  #formSubmit, label{
+    font-size:0.9rem;
   }
 
 }
