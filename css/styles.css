@@ -28,12 +28,19 @@ input {
   margin: 10px 0;
 }
 
+.currencyFormDiv {
+  padding:6%;
+}
+
 form {
   display: flex;
   height: 100%;
   justify-content: center;
   flex-direction: column;
   padding: 0 200px;
+  background:white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px #888888;
 }
 
 @media only screen and (min-width: 1000px) {
