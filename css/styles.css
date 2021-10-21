@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  padding-top:25px;
+  padding-top:15px;
 }
 
 .currencyInput label {
@@ -46,6 +46,18 @@ form {
   background:white;
   border-radius: 20px;
   box-shadow: 10px 10px 8px #888888;
+}
+
+.errorShow {
+  background: red;
+  padding:10px;
+  border-radius:5px;
+  color:white;
+}
+.resultShow {
+  background: #e9ecef;
+  padding:10px;
+  border-radius:5px;
 }
 
 @media only screen and (min-width: 1000px) {

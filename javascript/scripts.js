@@ -27,13 +27,13 @@ const getRates = function(data) {
     const currencyTypes = data.rates;
     if (theCurrency in currencyTypes) {
         const result = Math.floor(theAmount * currencyTypes[theCurrency]) + " " + theCurrency;
-        $('.result').show();
+        $('.result').addClass('resultShow').show();
         $('.error').hide();
         $('#cAmount,#cType').val('');
         return $('.result').html('Amount:' + result);
     } else if (theCurrency in currencyTypes !== theCurrency) {
         $('.result').hide();
-        $('.error').show();
+        $('.error').addClass('errorShow').show();
         $('#cAmount,#cType').val('');
         return $('.error').html('Invalid currency code, please try again.');
     }
