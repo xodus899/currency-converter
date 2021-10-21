@@ -4,7 +4,6 @@ $(document).ready(function() {
       noRefreshOnSubmit.preventDefault();
   const apiKey ="232f65d735f4d201846c175d8aa531cd";
   // https://fixer.io/quickstart
-
       $.ajax({
           type: 'get',
           url: endPoint + apiKey,
@@ -19,7 +18,6 @@ $(document).ready(function() {
 });
 
 // need to have form to be able to submit only once.
-
   const getRates = function(data) {
       //validate the input fields
       const theAmount = $("#cAmount").val();
@@ -32,7 +30,6 @@ $(document).ready(function() {
           if (currencyType[0].toLowerCase() !== theCurrency) {
             return $('.error').html('Invalid currency, please try again');
           }
-
           if (currencyType[0].toLowerCase() === theCurrency.toLowerCase()) {
           //user inputted currency type to match the key from object.
             console.log('we got this far');
@@ -44,7 +41,6 @@ $(document).ready(function() {
         $('.currencyInput').trigger("reset");
       });
   }
-
   dreadedError = function(error) {
       throw(error.responseText);
   }
