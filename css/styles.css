@@ -62,7 +62,7 @@ form {
 
 @media only screen and (min-width: 1000px) {
   form {
-    padding: 0 350px;
+    padding: 10px 350px;
   }
 }
 
@@ -72,7 +72,7 @@ form {
   }
 
   form {
-    padding: 0 50px;
+    padding: 20px 50px;
   }
 
   #formSubmit, label{
