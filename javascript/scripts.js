@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const endPoint = "http://data.fixer.io/api/latest?access_key=";
+    const endPoint = "data.fixer.io/api/latest?access_key=";
     const noRefreshOnSubmit = function(noRefreshOnSubmit) {
         noRefreshOnSubmit.preventDefault();
         const apiKey = "232f65d735f4d201846c175d8aa531cd";
