@@ -1,10 +1,9 @@
 $(document).ready(function() {
-    const endPoint = "data.fixer.io/api/latest?access_key=";
     const noRefreshOnSubmit = function(noRefreshOnSubmit) {
         noRefreshOnSubmit.preventDefault();
-        const apiKey = "232f65d735f4d201846c175d8aa531cd";
-        // https://fixer.io/quickstart
-
+        //https://freecurrencyapi.net
+        const endPoint = 'https://freecurrencyapi.net/api/v2/latest?apikey'
+        const apiKey = "d7db4dd0-3361-11ec-b36c-5f412c83640c"
         $.ajax({
             type: 'get',
             url: endPoint + apiKey,
@@ -24,7 +23,7 @@ const getRates = function(data) {
     //validate the input fields
     const theAmount = $("#cAmount").val();
     const theCurrency = $("#cType").val().toUpperCase();
-    const currencyTypes = data.rates;
+    const currencyTypes = data.data;
     if (theCurrency in currencyTypes) {
         const result = Math.floor(theAmount * currencyTypes[theCurrency]) + " " + theCurrency;
         $('.result').addClass('resultShow').show();
