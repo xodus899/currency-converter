@@ -2,7 +2,7 @@ $(document).ready(function() {
     const noRefreshOnSubmit = function(noRefreshOnSubmit) {
         noRefreshOnSubmit.preventDefault();
         //https://freecurrencyapi.net
-        const endPoint = 'https://freecurrencyapi.net/api/v2/latest?apikey'
+        const endPoint = 'https://freecurrencyapi.net/api/v2/latest?apikey='
         const apiKey = "d7db4dd0-3361-11ec-b36c-5f412c83640c"
         $.ajax({
             type: 'get',
