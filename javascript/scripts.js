@@ -19,23 +19,27 @@ $(document).ready(function() {
 
 // need to have form to be able to submit only once.
 
-const getRates = function(data) {
+const getRates = (data) => {
     //validate the input fields
     const theAmount = $("#cAmount").val();
     const theCurrency = $("#cType").val().toUpperCase();
     const currencyTypes = data.data;
-    if (theCurrency in currencyTypes) {
+    if (currencyTypes[theCurrency]) {
         const result = Math.floor(theAmount * currencyTypes[theCurrency]) + " " + theCurrency;
         $('.result').addClass('resultShow').show();
         $('.error').hide();
         $('#cAmount,#cType').val('');
         return $('.result').html('Amount:' + result);
-    } else if (theCurrency in currencyTypes !== theCurrency) {
-        $('.result').hide();
-        $('.error').addClass('errorShow').show();
-        $('#cAmount,#cType').val('');
-        return $('.error').html('Invalid currency code, please try again.');
+    } else {
+        return hideResult();
     }
+}
+
+const hideResult = () => {
+  $('.result').hide();
+  $('.error').addClass('errorShow').show();
+  $('#cAmount,#cType').val('');
+  return $('.error').html('Invalid currency code, please try again.');
 }
 
 dreadedError = function(error) {
