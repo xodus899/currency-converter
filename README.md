@@ -1,3 +1,3 @@
 # currency-converter
 
-## Convert your EUR to another currency
+## Convert your USD to another currency
