@@ -25,7 +25,7 @@ const getRates = (data) => {
     const theCurrency = $("#cType").val().toUpperCase();
     const currencyTypes = data.data;
     if (currencyTypes[theCurrency]) {
-        const result = Math.floor(theAmount * currencyTypes[theCurrency]) + " " + theCurrency;
+        const result = Math.floor(theAmount * currencyTypes[theCurrency]).toFixed(2) + " " + theCurrency;
         $('.result').addClass('resultShow').show();
         $('.error').hide();
         $('#cAmount,#cType').val('');
